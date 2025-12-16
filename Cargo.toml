@@ -14,11 +14,8 @@ description = "A Rust OSDev library for easily and safely managing page tables"
 bincode = { version = "2.0.1", optional = true, default-features = false, features = [
     "derive",
 ] }
-raw-cpuid = { version = "11.5.0", default-features = false }
-x86_64 = { git = "https://github.com/rust-osdev/x86_64", branch = "next", version = "0.15.2", default-features = false, features = [
-    "instructions",
-    "step_trait",
-] }
+raw-cpuid = { version = "11.6", default-features = false }
+x86_64 = { git = "https://github.com/rust-osdev/x86_64", rev = "c845be94a294c2ef95e4280e5c4c04758b9963c0" }
 
 [features]
 bincode = ["dep:bincode"]

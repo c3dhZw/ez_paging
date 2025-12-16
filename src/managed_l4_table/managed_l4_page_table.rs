@@ -116,7 +116,7 @@ impl ManagedL4PageTable {
         .unwrap()
     }
 
-    pub(super) fn table_mut(&mut self) -> PageTableWithLevelMut {
+    pub(super) fn table_mut(&mut self) -> PageTableWithLevelMut<'_> {
         PageTableWithLevelMut {
             page_table: self.page_table(),
             level: PageTableLevel::L4,

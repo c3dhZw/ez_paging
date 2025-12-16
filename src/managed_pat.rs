@@ -35,8 +35,8 @@ impl ManagedPat {
         }
         if pat_msr_index & 0b100 != 0 {
             flags |= match page_size {
-                PageSize::_1GiB | PageSize::_2MiB => PageTableFlags::PAT_HUGE_PAGE,
-                PageSize::_4KiB => PageTableFlags::PAT_4KIB_PAGE,
+                PageSize::_1GiB | PageSize::_2MiB => PageTableFlags::HUGE_PAGE,
+                PageSize::_4KiB => PageTableFlags::HUGE_PAGE,
             };
         }
         Some(flags)
